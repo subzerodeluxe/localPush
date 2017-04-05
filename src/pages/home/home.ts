@@ -127,7 +127,8 @@ export class HomePage {
  
     cancelAll(){
       LocalNotifications.cancelAll();
-  
+      
+      this.notifications = []; 
       let alert = this.alertCtrl.create({
           title: 'Notifications cancelled',
           buttons: ['Ok']
