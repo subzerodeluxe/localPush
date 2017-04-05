@@ -51,7 +51,6 @@ export class HomePage {
       this.chosenMinutes = time.minute.value; 
     }
 
- 
     addNotifications() {
  
         let currentDate = new Date();
