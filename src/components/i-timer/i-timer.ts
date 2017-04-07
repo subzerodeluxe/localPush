@@ -5,4 +5,6 @@ export interface ITimer {
   hasStarted: boolean;
   hasFinished: boolean;
   displayTime: string;
+  displayDate: string;
+  daysLeft: string; 
 }

@@ -1,11 +1,16 @@
 <ion-card *ngIf="timer">
     <ion-item class="no-bottom-border item">
-       <button ion-button *ngIf="timeInSeconds && timeInSeconds > 0"
-          large full clear>Friday 7 April 2017 
+       <button ion-button 
+          large full clear>{{timer.displayDate}}
         </button>
 
-        <button ion-button *ngIf="timeInSeconds && timeInSeconds > 0" 
+        <button ion-button 
             large full clear class="timer-button timer-text">{{timer.displayTime}}
+        </button>
+
+        <button ion-button
+            large full clear class="days-button timer-text"> 
+           {{ timer.daysLeft }}
         </button>
     </ion-item>
 
