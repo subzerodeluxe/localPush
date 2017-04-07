@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, Platform, AlertController } from 'ionic-angular';
 import { LocalNotifications } from 'ionic-native';
 import * as moment from 'moment';
+import { CountdownPage } from "../countdown/countdown";
 
 @Component({
   selector: 'page-home',
@@ -20,6 +21,7 @@ export class HomePage {
     chosenSeconds: number; 
 
     incomingMessage = ""; 
+    countdownPage = CountdownPage; 
   
   constructor(public navCtrl: NavController, public platform: Platform, public alertCtrl: AlertController) {
     
@@ -41,6 +43,11 @@ export class HomePage {
         ];
  
   }
+
+    pushData() {
+        this.navCtrl.push(this.countdownPage, { incomingMessage: this.incomingMessage}); 
+        console.log("She pushed me .. " + this.incomingMessage);
+    }
 
     ionViewDidLoad() {
        console.log("How we doing dog?");  

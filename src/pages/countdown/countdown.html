@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>countdown</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding scrollbar-y-auto>
+
+<timer #timer [timeInSeconds]="inputSeconds"></timer>
+
+  <ion-item>
+    <ion-input [(ngModel)]="inputSeconds" 
+    max="300"
+    min="5" 
+    type="number" 
+    placeholder="How many seconds?"></ion-input>
+  </ion-item>
+
+  <button ion-button full outline (click)="setTimer()">Confirm</button>
+</ion-content>
+
+
+
